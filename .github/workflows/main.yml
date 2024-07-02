@@ -19,8 +19,6 @@ jobs:
       run: npm install
     - name: Build
       run: npm run build
-    - name: Run Super-Linter
-      uses: github/super-linter@v3
     - name: Deploy to Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
