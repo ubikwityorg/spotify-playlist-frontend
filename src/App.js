@@ -16,9 +16,10 @@ function App() {
     setSongs(dummySongs); //replace with fetchedSong when using API call
   }
 
-  const fetchSongs = async (descriptor) => {
+  /*const fetchSongs = async (descriptor) => {
     return ["Song 1", "Song 2", "Song 3"]; // will be replaced with the fetched responses
   }
+  */
 
   return (
     <div className='App'>
