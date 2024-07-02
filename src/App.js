@@ -11,7 +11,7 @@ function App() {
   }
 
   const handleSearch = async () => {
-    const fetchedSong = await fetchSongs(descriptor); // this is where the OpenAI api call will go
+    //const fetchedSong = await fetchSongs(descriptor); // this is where the OpenAI api call will go
     const dummySongs = ["Song 1", "Song 2","Song 3"]
     setSongs(dummySongs); //replace with fetchedSong when using API call
   }
