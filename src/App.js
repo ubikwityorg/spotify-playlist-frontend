@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+
 
 function App() {
+  const[descriptor, setDescriptor] = useState('');
+  const [songs, setSongs] = useState([]);
+
+  const handleInput = (e) => {
+    setDescriptor(e.target.value); 
+  }
+
+  const handleSearch = async () => {
+    const fetchedSong = await fetchSongs(descriptor); // this is where the OpenAI api call will go
+    const dummySongs = ["Song 1", "Song 2","Song 3"]
+    setSongs(dummySongs); //replace with fetchedSong when using API call
+  }
+
+  const fetchSongs = async (descriptor) => {
+    return ["Song 1", "Song 2", "Song 3"]; // will be replaced with the fetched responses
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Worship Songs Finder</h1>
+      <input
+          type = "text"
+          value = {descriptor}
+          onChange={handleInput}
+          placeholder='Enter a song category (e.g. forgiveness)'
+      />
+      <button onClick = {handleSearch}>Search</button>
+      <ul>
+        {songs.map((song, index) => (
+          <li key= {index}>{song}</li>
+        ))}
+      </ul>
     </div>
+
   );
-}
+
+}; //end app
 
 export default App;
