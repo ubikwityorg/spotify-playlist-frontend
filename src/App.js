@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Worship Songs Finder</h1>
+      <h1>Worship Songs Finder Demo</h1>
       <input
           type = "text"
           value = {descriptor}
