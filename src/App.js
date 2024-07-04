@@ -1,5 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import { Route,Routes } from 'react-router-dom'
 
 
 function App() {
@@ -23,6 +25,12 @@ function App() {
 
   return (
     <div className='App'>
+      <Navbar /> 
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/song-finder" element={<song-finder />} />
+        <Route path="/about" element={<about />} />
+      </Routes>
       <h1>Worship Songs Finder Demo</h1>
       <input
           type = "text"
@@ -37,6 +45,7 @@ function App() {
         ))}
       </ul>
     </div>
+
 
   );
 
