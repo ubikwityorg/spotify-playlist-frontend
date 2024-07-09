@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import { Route,Routes,} from 'react-router-dom';
 import Finder from './components/pages/Finder';
 import Home from './components/pages/Home';
-import About from './components/pages/About'
+import Abouts from './components/pages/Abouts'
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/song-finder" element={<Finder />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Abouts />} />
       </Routes>
     </div>
   );
