@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
     return (
     <nav className="nav">
-        <Link to="/home" className= "site-title">Worship-Gen</Link>
+        <Link to="/home" className= "site-title">WorshipGen</Link>
         <ul>
             <li className="active">
                 <Link to="/song-finder">Song Finder</Link>
