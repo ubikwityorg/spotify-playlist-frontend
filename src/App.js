@@ -4,8 +4,7 @@ import Navbar from './components/Navbar';
 import { Route,Routes,} from 'react-router-dom';
 import Finder from './components/pages/Finder';
 import Home from './components/pages/Home';
-import About from './components/pages/About';
-
+import About from './components/pages/About'
 
 function App() {
 
