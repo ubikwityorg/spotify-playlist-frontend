@@ -5,6 +5,8 @@
 
  body {
     margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
  }
 
  .nav {
@@ -44,4 +46,8 @@
 
  .nav li:hover {
     background-color: #777;
+ }
+
+ .finder-page, .about-page {
+   background-color: color #008080;
  }

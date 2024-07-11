@@ -4,7 +4,8 @@ import Navbar from './components/Navbar';
 import { Route,Routes, Navigate} from 'react-router-dom';
 import Finder from './components/pages/Finder';
 import Home from './components/pages/Home';
-import Abouts from './components/pages/Abouts'
+import Abouts from './components/pages/Abouts';
+import './components/styles.css';
 
 function App() {
 
