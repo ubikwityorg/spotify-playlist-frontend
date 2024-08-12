@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useAuth } from './../AuthContext';
 
 export default function Finder() {
+    const { accessToken } = useAuth();
     const [descriptor, setDescriptor] = useState('');
     const [songs, setSongs] = useState([]);
     const [playlistLink, setPlaylistLink] = useState('');
@@ -12,7 +14,7 @@ export default function Finder() {
     const handleSearch = async () => {
         try {
             console.log(`Searching for playlists with descriptor: ${descriptor}`);
-            const response = await fetch(`/playlists?topic=${encodeURIComponent(descriptor)}`);
+            const response = await fetch(`http://127.0.0.1:5000/log?access_token=${accessToken}&topic=${encodeURIComponent(descriptor)}`);
             console.log(`Response status: ${response.status}`);
             if (response.ok) {
                 const data = await response.json();

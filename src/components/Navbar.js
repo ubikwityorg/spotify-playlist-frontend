@@ -13,6 +13,9 @@ export default function Navbar() {
             <li>
                 <Link to="/about">About</Link>
              </li>
+             <li>
+                <Link to="/callback">Profile</Link>
+             </li>
         </ul> 
     </nav>
     );
