@@ -3,8 +3,9 @@ import "../styles.css";
 
 export default function Abouts() {
     return ( 
-            <div style={{ backgroundColor: '#008080', color: 'white', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                <h1>About</h1>
+            <div className="about-page">
+                <div className="about-content"></div>
+                    <h1>About</h1>
             </div>
     )
 }

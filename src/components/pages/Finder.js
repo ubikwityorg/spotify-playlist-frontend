@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from './../AuthContext';
+import'./Finder.css';
 
 export default function Finder() {
     const { accessToken } = useAuth();
